@@ -34,6 +34,29 @@ pip install -r requirements.txt
 
 
 ## Описание функций
+| Этап | Изображение |
+|------|--------------|
+| Исходное | ![00](results/00_original.jpg) |
+| Обнаружение лица | ![01](results/01_face_bbox.jpg) |
+| Вырезанное лицо | ![02](results/02_face_crop.jpg) |
+| Границы | ![03](results/03_edges_canny.png) |
+| Очистка контуров | ![04](results/04_edges_cleaned.png) |
+| Углы | ![05](results/05_edges_plus_corners.png) |
+| Морфология | ![06](results/06_dilated.png) |
+| Маска | ![07](results/07_mask_M_float.png) |
+| Сглаживание | ![08](results/08_F1_smooth.jpg) |
+| Улучшение | ![09](results/09_F2_enhanced.jpg) |
+| Комбинация | ![10](results/10_result_face.jpg) |
+| Итог | ![11](results/11_seamless_back.jpg) |
+
+# expand_bbox(x, y, w, h, scale: float, W: int, H: int)
+Расширяет найденную область лица на заданный процент (scale), не выходя за границы изображения.
+- x, y, w, h — координаты и размеры исходного прямоугольника лица.
+- scale — доля от ширины/высоты (например, 0.10 = 10%).
+- W, H — полные размеры исходного изображения.
+
+Возвращает:
+(x2, y2, w2, h2) — координаты и размеры расширенного фрагмента.
 
 
 
@@ -55,18 +78,5 @@ pip install -r requirements.txt
 
 
 
-| Этап | Изображение |
-|------|--------------|
-| Исходное | ![00](results/00_original.jpg) |
-| Обнаружение лица | ![01](results/01_face_bbox.jpg) |
-| Вырезанное лицо | ![02](results/02_face_crop.jpg) |
-| Границы | ![03](results/03_edges_canny.png) |
-| Очистка контуров | ![04](results/04_edges_cleaned.png) |
-| Углы | ![05](results/05_edges_plus_corners.png) |
-| Морфология | ![06](results/06_dilated.png) |
-| Маска | ![07](results/07_mask_M_float.png) |
-| Сглаживание | ![08](results/08_F1_smooth.jpg) |
-| Улучшение | ![09](results/09_F2_enhanced.jpg) |
-| Комбинация | ![10](results/10_result_face.jpg) |
-| Итог | ![11](results/11_seamless_back.jpg) |
+
 
