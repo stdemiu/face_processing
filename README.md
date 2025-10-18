@@ -21,7 +21,7 @@ face_processing_lab/
 │   ├── 01_face_bbox.jpg
 │   ├── ...
 │   └── 11_seamless_back.jpg
-└── orig.png                # исходное изображение
+└── original.png                # исходное изображение
 ```
 ## Установка
 ```bash
@@ -31,6 +31,11 @@ pip install -r requirements.txt
 ```
 
 Результаты сохраняются в папку results/.
+
+
+## Описание функций
+
+
 
 ## Структура выходных файлов
 | Файл                      | Описание                    |
@@ -47,3 +52,21 @@ pip install -r requirements.txt
 | 09_F2_enhanced.jpg        | улучшенное лицо             |
 | 10_result_face.jpg        | результат по формуле        |
 | 11_seamless_back.jpg      | финальная бесшовная вставка |
+
+
+
+| Этап | Изображение |
+|------|--------------|
+| Исходное | ![00](results/00_original.jpg) |
+| Обнаружение лица | ![01](results/01_face_bbox.jpg) |
+| Вырезанное лицо | ![02](results/02_face_crop.jpg) |
+| Границы | ![03](results/03_edges_canny.png) |
+| Очистка контуров | ![04](results/04_edges_cleaned.png) |
+| Углы | ![05](results/05_edges_plus_corners.png) |
+| Морфология | ![06](results/06_dilated.png) |
+| Маска | ![07](results/07_mask_M_float.png) |
+| Сглаживание | ![08](results/08_F1_smooth.jpg) |
+| Улучшение | ![09](results/09_F2_enhanced.jpg) |
+| Комбинация | ![10](results/10_result_face.jpg) |
+| Итог | ![11](results/11_seamless_back.jpg) |
+
