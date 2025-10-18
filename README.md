@@ -10,6 +10,7 @@
 8. Бесшовная вставка лица обратно в исходное изображение.
    
 ## Структура проекта
+```plaintext
 face_processing_lab/
 │
 ├── main.py                 # основной скрипт обработки (уже готов)
@@ -21,7 +22,7 @@ face_processing_lab/
 │   ├── ...
 │   └── 11_seamless_back.jpg
 └── orig.png                # исходное изображение
-
+```
 ## Установка
 ```bash
 git clone https://github.com/<твой_логин>/face_processing_lab.git
